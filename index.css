@@ -42,6 +42,13 @@ a, a:hover {
 }
 
 /* Cards */
+.postcard {
+  display: flex;
+  flex-direction: row; /* This will align children side by side */
+  align-items: stretch; /* This will make both children equal height */
+  /* ... other existing styles ... */
+}
+
 .postcard .postcard__tagbox .tag__item {
   display: inline-block;
   background: rgba(83, 83, 83, 0.4);
@@ -121,7 +128,7 @@ a, a:hover {
     height: 100%;
   }
 
-  &:before {
+  .postcard:before {
     content: "";
     position: absolute;
     top: 0;
@@ -132,8 +139,8 @@ a, a:hover {
     opacity: 1;
     border-radius: 10px;
   }
-
-  &:hover .postcard__bar {
+  
+  .postcard:hover .postcard__bar {
     width: 100px;
   }
 
